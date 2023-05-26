@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulare in actiune</title>
+  </head>
+  <body>
+    <div>
+      Atributele principale ale unui formular sunt <b>action, target, method</b>
+      <br />
+      <b>Metoda GET</b>
+      <ul>
+        <li>Utilizatorul sda poata face bookmark la url-ul rezultat.</li>
+        <li>NICIODATA sa NU TRIMITEM informatii sensibile prin GET</li>
+        <li>URL-UL are dimensiunea maxima de 2048 caractere.</li>
+      </ul>
+      <b>Metoda POST</b>
+      <ul>
+        <li>Datele sunt trimise in corpul cererii HTTP(HTTP Request)</li>
+        <li>Putem trimite date de dimensiuni mari</li>
+        <li>Utilizatorul nu mai poate face bookmark pe rezultat</li>
+      </ul>
+    </div>
+    <form action="exemplu.php" target="_blank" method="POST" autocomplete="on">
+      Nume: <input type="text" name="username" /><br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

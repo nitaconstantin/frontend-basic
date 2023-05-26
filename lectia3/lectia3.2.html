@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulare in actiune</title>
+  </head>
+  <body>
+    <form action="example.php" method="GET" target="_blank">
+      <label for="username">Nume:</label>
+      <br />
+      <input type="text" name="username" id="username" />
+      <br />
+      <label for="countries">Alege o tara:</label>
+      <br />
+      <select name="country" id="countries" disabled>
+        <!-- size si multiple -->
+        <option value="ro">Romania</option>
+        <option value="bg">Bulgaria</option>
+        <option value="gr" selected>Grecia</option>
+        <option value="it">Italia</option>
+        <option value="en">Anglia</option>
+      </select>
+      <br />
+      <label for="multiple_data">Descriere</label>
+      <br />
+      <textarea
+        name="description"
+        id="multiple_data"
+        cols="20"
+        rows="5"
+        autofocus
+      >
+Descriere exemplu.....
+      </textarea>
+      <br />
+      <fieldset style="width: 200px">
+        <legend>Date contact</legend>
+        <label for="address">Adresa:</label>
+        <br />
+        <input type="text" id="address" name="address" />
+        <br />
+        <label for="phone">Telefon:</label>
+        <br />
+        <input type="text" id="phone" name="phone" />
+      </fieldset>
+      <br />
+      <label for="browsers_input">Browser folosit:</label>
+      <br />
+      <input
+        type="text"
+        id="browsers_input"
+        list="browsers"
+        name="browsers_input"
+      />
+      <datalist id="browsers">
+        <option value="ie">Internet Explorer</option>
+        <option value="Chrome">Chrome</option>
+        <option value="sa">Safari</option>
+        <option value="fa">Firefox</option>
+      </datalist>
+      <!-- <button type="button" onclick="alert('Salut')">Trimite</button> -->
+      <!-- <button type="submit">Trimite</button> -->
+      <input type="submit" value="Trimite" />
+      <button type="reset" disabled>Reset</button>
+    </form>
+  </body>
+</html>

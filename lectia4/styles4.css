@@ -1,0 +1,86 @@
+a {
+  color: blue;
+  font-weight: bold;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: orange;
+}
+a:active {
+  color: yellow;
+}
+ul {
+  list-style-type: square;
+}
+li {
+  display: inline;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 5px;
+}
+table {
+  width: 400px;
+  margin-bottom: 20px;
+  /* text-align: center; */
+}
+tr {
+  height: 50px;
+}
+th {
+  background-color: aqua;
+}
+th,
+td {
+  border-bottom: 1px solid #000;
+  /* border: 1px solid black;
+  border-collapse: collapse; */
+}
+td.right {
+  text-align: right;
+}
+
+/* tr:hover {
+  background-color: gray;
+} */
+tr:nth-child(even) {
+  background-color: gray;
+}
+
+.mydiv {
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+}
+.mydivtwo {
+  width: 500px;
+  border: 1px solid black;
+  height: 4000px;
+  position: relative;
+}
+.mydivthree {
+  border: 1px solid red;
+  width: 250px;
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
+}
+
+.mydivfour {
+  border: 2px solid green;
+  padding: 10px;
+  position: sticky;
+  top: 5px;
+}
+.mydiv5 {
+  border: 1px solid blue;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 50px;
+  overflow: auto;
+}

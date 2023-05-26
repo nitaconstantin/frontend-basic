@@ -1,0 +1,33 @@
+/*
+Continut comentariu pe mai multe
+linii
+*/
+div {
+  background-color: yellow;
+}
+/* #div1 {
+  color: blue;
+}
+#div2 {
+  color: blue;
+} */
+
+.color-blue {
+  color: blue;
+  font-weight: bold;
+}
+
+div.other {
+  color: red;
+}
+
+.mydiv {
+  width: 400px;
+  height: 100px;
+  /* background-color: rgba(255, 50, 100, 0.5); */
+  /* background-color: #ff00ff; */
+  background-color: hsla(0, 100%, 50%, 0.2);
+}
+p {
+  color: rgba(255, 50, 100, 0.1);
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulare in actiune</title>
+  </head>
+  <body>
+    <form action="example.php" method="GET" target="_blank">
+      <label for="first">Nume:</label>
+      <br />
+      <input
+        type="text"
+        name="name"
+        id="first"
+        value="exemplu"
+        size="30"
+      /><!-- readonly, disabled -->
+      <br />
+      <label for="second">Prenume:</label>
+      <br />
+      <input
+        type="text"
+        name="surname"
+        id="second"
+        maxlength="5"
+        placeholder="Radu"
+      />
+      <!-- required -->
+      <br /><br />
+      <label for="age">Varsta:</label>
+      <br />
+      <input type="number" name="age" id="age" min="16" max="70" step="4" />
+      <br />
+      <label for="pass">Parola:</label>
+      <br />
+      <input type="password" name="pass" id="pass" />
+      <br />
+      <label for="occ1">Student:</label>
+      <input type="radio" name="occupation" id="occ1" value="occupation1" />
+      <label for="occ2">Masterand:</label>
+      <input type="radio" name="occupation" id="occ2" value="occupation2" />
+      <label for="occ3">Angajat:</label>
+      <input
+        type="radio"
+        name="occupation"
+        id="occ3"
+        value="occupation3"
+        checked
+      />
+      <br />
+      <label for="tr1">Masina</label>
+      <input type="checkbox" name="transport1" id="tr1" value="car" checked />
+      <br />
+      <label for="tr2">Bicicleta</label>
+      <input type="checkbox" name="transport2" id="tr2" value="bike" />
+      <br />
+      <label for="tr3">Tren</label>
+      <input type="checkbox" name="transport3" id="tr3" value="tren" checked />
+      <br />
+      <label for="file1">Fisier:</label>
+      <br />
+      <input type="file" name="file" id="file1" />
+      <br />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+      <br />
+      <label for="bdate">Data nasterii:</label>
+      <br />
+      <input type="date" name="bdate" id="bdate" />
+      <br />
+      <label for="color">Culoare:</label>
+      <input type="color" name="color" id="color" />
+      <br />
+      <label for="percentage">Procent 10-90</label>
+      <br />
+      <input type="range" name="percentage" id="percentage" min="10" max="90" />
+      <br />
+      <button type="submit">Trimite</button>
+    </form>
+  </body>
+</html>
