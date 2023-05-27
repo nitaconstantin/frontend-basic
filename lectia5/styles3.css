@@ -80,3 +80,22 @@
 .mybutton:focus {
   outline: none;
 }
+
+.large_text {
+  margin-top: 10px;
+  width: 800px;
+  padding: 20px;
+  border: 1px solid black;
+
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 1px dashed lightblue;
+  column-width: 200px;
+}
+.art_title {
+  column-span: all;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 3px;
+}
