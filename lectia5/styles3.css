@@ -26,9 +26,32 @@
   height: 150px;
   background-color: blue;
   margin-left: 5px;
-  animation-name: animation1;
+  /* animation-name: animation1;
   animation-duration: 4s;
   animation-delay: 2s;
   /* animation-direction: reverse; */
-  animation-iteration-count: 2;
+  /* animation-iteration-count: 2; */
+}
+
+.mydiv2 {
+  margin-top: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.mydiv2 .tooltip {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  width: 150px;
+  position: absolute;
+  bottom: 100%;
+  left: 5px;
+  text-align: center;
+  visibility: hidden;
+  transition: visibility 0.5s ease;
+}
+
+.mydiv2:hover .tooltip {
+  visibility: visible;
 }
