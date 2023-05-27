@@ -1,0 +1,34 @@
+@keyframes animation1 {
+  /* from {
+    margin-left: 5px;
+    background-color: blue;
+  }
+  to {
+    margin-left: 100px;
+    background-color: green;
+  } */
+  /* putem adauga oricati pasi dorim */
+  0% {
+    margin-left: 5px;
+    background-color: blue;
+  }
+  50% {
+    margin-left: 100px;
+    background-color: green;
+  }
+  100% {
+    margin-left: 200px;
+    background-color: red;
+  }
+}
+.mydiv1 {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  margin-left: 5px;
+  animation-name: animation1;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  /* animation-direction: reverse; */
+  animation-iteration-count: 2;
+}
