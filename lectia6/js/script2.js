@@ -46,9 +46,21 @@ linii
 // x += "7";
 // x += 1;
 
+// 0 && 1 = 0;
+// 0 && 0 = 0;
+// 1 && 0 = 0;
+// 1 && 1 = 1;
+
+// 0 || 0 = 0;
+// 0 || 1 = 1;
+// 1|| 0 = 1;
+// 1 || 1 = 1;
+
+// operatorul logic pentru negare !
+
 let x = 5;
-let y = "5";
-let z = x >= y;
+let y = 8;
+let z = x === y || x > 3;
 
 // console.log("testam NaN", isNaN(y));
 
