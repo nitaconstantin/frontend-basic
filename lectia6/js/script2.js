@@ -25,6 +25,25 @@ linii
 // let x = true;
 
 // let x = function () {};
-let x = null;
-console.log("x = ", x);
-console.log("Variabila x este de tipul ", typeof x);
+// let x = null;
+// console.log("Variabila x este de tipul ", typeof x);
+
+// let x = 10;
+// let y = 7;
+// let z = x % y;
+// let x = 7;
+// let y = 10;
+// x -= y; // x = x + 5
+// x++;
+// let x = 5 + 3 * 2 + 7 - 8 / 2; // 14
+
+// let x = "Text";
+// let y = "descriptiv";
+// let z = x + " " + y;
+// x += " un alt text";
+let x = 5;
+x += 3;
+x += "7";
+x += 1;
+console.log("x = ", parseInt(x));
+// console.log(typeof z);
