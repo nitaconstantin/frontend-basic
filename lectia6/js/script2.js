@@ -41,9 +41,28 @@ linii
 // let y = "descriptiv";
 // let z = x + " " + y;
 // x += " un alt text";
+// let x = 5;
+// x += 3;
+// x += "7";
+// x += 1;
+
 let x = 5;
-x += 3;
-x += "7";
-x += 1;
-console.log("x = ", parseInt(x));
+let y = "5";
+let z = x >= y;
+
+// console.log("testam NaN", isNaN(y));
+
+// console.log("y transformat in numar = ", parseInt(y));
 // console.log(typeof z);
+console.log("z = ", z);
+
+// function testAge() {
+//   let age = prompt("Introduceti varsta:");
+//   if (age >= 18) {
+//     document.getElementById("mydiv1").innerText =
+//       "Aveti varsta legala pentru a conduce";
+//   } else {
+//     document.getElementById("mydiv1").innerText =
+//       "Nu aveti varsta legala pentru a conduce";
+//   }
+// }
