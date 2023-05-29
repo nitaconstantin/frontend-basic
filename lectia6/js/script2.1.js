@@ -28,3 +28,9 @@ let b = 7;
 // ternary operator
 // valori ce intorc intotdeauna false: 0, '', undefined, NaN, null, false
 null ? console.log("Adevarat!") : console.log("Fals!");
+
+function addData() {
+  let data = prompt("Introduceti date:");
+  let div1 = document.getElementById("dataDiv");
+  div1.innerText = data;
+}
