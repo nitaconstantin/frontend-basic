@@ -1,7 +1,8 @@
 "use strict";
-
 function addValue() {
-  let data = prompt("Adauga o valoare");
+  let data = prompt(
+    "Introduceti un numar, un nume sau textul adevarat sau fals"
+  );
   let divData = document.getElementById("divData");
   if (isNaN(data)) {
     if (
@@ -18,8 +19,10 @@ function addValue() {
     data = parseInt(data);
     if (data < 5 || data > 20) {
       divData.innerText = "Te rugam sa introduci un numar intre 5 si 20";
-    } else if (data >= 5) {
+    } else if (data >= 5 && data <= 10) {
       divData.innerText = data + " * 3 = " + data * 3;
+    } else if (data > 10 && data < 20) {
+      divData.innerText = data + " + 20 = " + data + 20;
     }
   }
 }
