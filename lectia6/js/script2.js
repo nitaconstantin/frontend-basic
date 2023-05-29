@@ -58,9 +58,9 @@ linii
 
 // operatorul logic pentru negare !
 
-let x = 5;
-let y = 8;
-let z = x === y || x > 3;
+let x = "5";
+let y = "1";
+let z = x > y;
 
 // console.log("testam NaN", isNaN(y));
 
