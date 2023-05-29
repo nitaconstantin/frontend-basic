@@ -4,7 +4,9 @@ function addValue() {
     "Introduceti un numar, un nume sau textul adevarat sau fals"
   );
   let divData = document.getElementById("divData");
-  if (isNaN(data)) {
+  if (data === "") {
+    divData.innerText = "Nu ai introdus nimic. Mai incearca!";
+  } else if (isNaN(data)) {
     if (
       data === "adevarat" ||
       data === "fals" ||
@@ -22,7 +24,7 @@ function addValue() {
     } else if (data >= 5 && data <= 10) {
       divData.innerText = data + " * 3 = " + data * 3;
     } else if (data > 10 && data < 20) {
-      divData.innerText = data + " + 20 = " + data + 20;
+      divData.innerText = data + " + 20 = " + (data + 20);
     }
   }
 }
