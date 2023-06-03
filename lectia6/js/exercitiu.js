@@ -4,7 +4,7 @@ function addValue() {
     "Introduceti un numar, un nume sau textul adevarat sau fals"
   );
   let divData = document.getElementById("divData");
-  if (data === "") {
+  if (data === "" || data === " ") {
     divData.innerText = "Nu ai introdus nimic. Mai incearca!";
   } else if (isNaN(data)) {
     if (

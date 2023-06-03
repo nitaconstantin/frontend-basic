@@ -9,7 +9,7 @@ function addData() {
 
   const x = parseInt(userData);
 
-  if (userData === "") {
+  if (userData === "" || userData === " ") {
     responseText = "Nu ai introdus nici o valoare. Mai incearca!";
   } else if (isNaN(x)) {
     if (userData === "adevarat" || userData === "fals") {
