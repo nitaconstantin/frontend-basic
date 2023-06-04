@@ -1,7 +1,28 @@
 "use strict";
 
-// v1 = 3;
+let myNewVar1 = "",
+  myNewVar2 = 0,
+  myNewVar3 = [],
+  myNewVar4 = {};
+const myNewVar5 = 12;
+
+let newVar1 = new String("Alina");
+let newVar2 = "Alina";
+console.log("--->", newVar1, newVar2, newVar1 === newVar2);
+console.log(typeof newVar1, typeof newVar2);
+
+let newVar3 = ""; // NU ASA let newVar3 = new String();
+
+// let newVar4 = 5 + 7; // 12
+// let newVar4 = "5" + 7; // 57
+// let newVar4 = 5 + "7"; // 57
+// let newVar4 = "5" - 7; // -2
+// let newVar4 = 5 - '7'; // -2
+let newVar4 = 9 - "c"; // NaN
+// console.log("newVar4 = ", newVar4);
+
 let v1 = 3;
+// v1 = 3;
 //delete v1;
 function func1() {
   // function strict mode
@@ -42,3 +63,29 @@ console.log("obj2 property1: ", obj2.property1);
 // public, protected, static, private, let, eval, arguments, interface, yield, let, var, const etc...
 
 // let var = 5;
+
+let myLocalVariable;
+let addThreeNumbers = (a, b, c) => {
+  return a + b + c;
+};
+
+// if (a == b) {
+// } else {
+// }
+
+let numbersArray = [5, 7, 9];
+
+let person = {
+  name: "Adrian",
+  age: 25,
+  height: 1.78,
+  nationality: "RO",
+};
+
+function newFuncToReadDataFromServer(
+  myParameter1,
+  secondParameterRegardingInput,
+  thirdParameterRegardingOutput
+) {
+  return true;
+}
