@@ -1,0 +1,16 @@
+.container {
+  width: 400px;
+}
+
+input {
+  width: 40px;
+}
+
+.numbers_error {
+  border: 1px solid red;
+  color: red;
+}
+
+.numbers_error:focus {
+  outline: none;
+}
