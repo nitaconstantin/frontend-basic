@@ -1,5 +1,31 @@
 "use strict";
 
+let a1 = 5;
+let a2 = "5";
+
+if (a1 === a2) {
+  console.log("Valorile sunt egale");
+}
+switch (a1) {
+  case "5":
+    console.log("Switch OK");
+}
+
+let a3 = 0.1 + 0.2;
+console.log("a3 = ", a3);
+
+let a4 = "Buna" + "ziua!";
+console.log(a4);
+
+function add30ToNumber(x) {
+  let y = 30;
+  return x + y;
+}
+console.log(add30ToNumber(7));
+
+//undefined !== null;
+console.log("undefined variable: ", typeof a5);
+
 let myNewVar1 = "",
   myNewVar2 = 0,
   myNewVar3 = [],
