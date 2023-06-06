@@ -1,18 +1,14 @@
 .container {
   width: 400px;
-  margin: auto;
 }
 
 input {
   width: 40px;
-  background-color: greenyellow;
-  color: white;
-  font-weight: bolder;
 }
 
 .numbers_error {
-  border: 1px solid red;
   color: red;
+  border: 1px solid red;
 }
 
 .numbers_error:focus {
