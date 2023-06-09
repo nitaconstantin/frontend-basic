@@ -37,3 +37,12 @@ array4.unshift("negru");
 console.log(array4);
 array4.shift();
 console.log(array4);
+
+let array5 = ["Marian"];
+let array6 = ["Marian"];
+console.log("array5 === array6 = ", array5 === array6);
+
+let array7 = array5;
+array7.push("Andreea");
+console.log("array5 = ", array5);
+console.log("array5 === array7 = ", array5 === array7);
