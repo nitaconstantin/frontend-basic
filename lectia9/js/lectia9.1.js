@@ -20,6 +20,10 @@ console.log("arr5 =>", arr5);
 let [a, b, c] = [...arr1];
 console.log(b);
 
+function returnNames() {
+  return ["Adrian", "Roxana", "Daniel", "Mihaela", "Radu"];
+}
+
 // let colors = ["galben", "verde", "albastru", "gri"];
 
 // let colors2 = [...colors];
@@ -27,3 +31,23 @@ console.log(b);
 // for (let i = 0; i < colors.length; i++) {
 //   console.log(colors2[i]);
 // }
+
+// let arr6 = ["Adrian", "Roxana", "Daniel", "Mihaela", "Radu"];
+
+// let name1 = arr6[0];
+// let name2 = arr6[1];
+// let name1, name2;
+let [name1, ...namesArr1] = returnNames();
+console.log("nume1= ", name1);
+// console.log("nume2= ", name2);
+
+console.log("vector nume 1= ", namesArr1);
+
+let [color1 = "red", color2 = "green", color3 = "yellow"] = ["black"];
+console.log("colors: ", color1, color2, color3);
+
+let x1 = 5;
+let x2 = 9;
+
+[x1, x2] = [x2, x1];
+console.log(`x1 = ${x1}, x2 = ${x2}`);
