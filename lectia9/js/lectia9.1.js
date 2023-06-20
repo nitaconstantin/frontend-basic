@@ -51,3 +51,15 @@ let x2 = 9;
 
 [x1, x2] = [x2, x1];
 console.log(`x1 = ${x1}, x2 = ${x2}`);
+
+function myFunc1(a, b) {
+  console.log(">>>", a, b);
+  console.log(arguments);
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(`= ${arguments[i]}`);
+  }
+}
+
+let arr7 = [5, 2, 9, 6, 3, 1, 0];
+myFunc1(arr7);
+myFunc1(...arr7);
