@@ -6,15 +6,15 @@
 4. undefined
 5. NULL
 */
-let a1 = new String("red");
+let a = new String("red");
 let a2 = "red";
-console.log(typeof a1, typeof a2, a1 === a2);
+console.log(typeof a, typeof a2, a === a2);
 
-let arr1 = [2, 3, 5];
-console.log(typeof arr1);
+let arrOne = [2, 3, 5];
+console.log(typeof arrOne);
 
 //object literal
-let person1 = {
+let personOne = {
   firsName: "Radu",
   lastName: "Popescu",
   age: 27,
@@ -25,23 +25,23 @@ let person1 = {
   },
 };
 
-console.log(person1.firsName);
-console.log(person1.fullName());
+console.log(personOne.firsName);
+console.log(personOne.fullName());
 
-let person2 = new Object();
-person2.name = "Maria";
-person2.height = 172;
-person2.age = 32;
+let personTwo = new Object();
+personTwo.name = "Maria";
+personTwo.height = 172;
+personTwo.age = 32;
 
-let person3 = person2;
+let person3 = personTwo;
 person3.name = "Roxana";
-console.log(person2.name);
+console.log(personTwo.name);
 
-let propName = "name";
+let propertyName = "name";
 
-console.log("Numele persoanei 2 este: ", person2.name);
-console.log("Numele persoanei 2 este: ", person2["name"]);
-console.log("Numele persoanei 2 este: ", person2[propName]);
+console.log("Numele persoanei 2 este: ", personTwo.name);
+console.log("Numele persoanei 2 este: ", personTwo["name"]);
+console.log("Numele persoanei 2 este: ", personTwo[propertyName]);
 
 function iterateObj(object) {
   for (let p in object) {
@@ -51,13 +51,13 @@ function iterateObj(object) {
 
 iterateObj(person1);
 
-console.log("----", person2);
+console.log("----", personTwo);
 delete person2.age;
-console.log("===", person2);
+console.log("===", personTwo);
 
 // JSON = JavaScript Object Notation
 
-let myObj1 = [
+let myObjOne = [
   {
     name: "Marius",
     age: 28,
@@ -68,8 +68,8 @@ let myObj1 = [
   },
 ];
 
-let myObj2 = JSON.stringify(myObj1);
-let myObj3 = JSON.parse(myObj2);
-console.log(myObj1);
-console.log(myObj2);
-console.log(myObj3);
+let myObjTwo = JSON.stringify(myObjOne);
+let myObjThree = JSON.parse(myObjTwo);
+console.log(myObjOne);
+console.log(myObjTwo);
+console.log(myObjThree);

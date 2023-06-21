@@ -1,0 +1,12 @@
+.container {
+  width: 500px;
+}
+
+input {
+  width: 40px;
+}
+
+.numbers_error {
+  color: red;
+  border: 1px solid red;
+}
