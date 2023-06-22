@@ -33,8 +33,8 @@ personTwo.name = "Maria";
 personTwo.height = 172;
 personTwo.age = 32;
 
-let person3 = personTwo;
-person3.name = "Roxana";
+let personThree = personTwo;
+personThree.name = "Roxana";
 console.log(personTwo.name);
 
 let propertyName = "name";
@@ -49,10 +49,10 @@ function iterateObj(object) {
   }
 }
 
-iterateObj(person1);
+iterateObj(personOne);
 
 console.log("----", personTwo);
-delete person2.age;
+delete personTwo.age;
 console.log("===", personTwo);
 
 // JSON = JavaScript Object Notation
@@ -73,3 +73,35 @@ let myObjThree = JSON.parse(myObjTwo);
 console.log(myObjOne);
 console.log(myObjTwo);
 console.log(myObjThree);
+
+let myCarObjOne = {
+  make: "Volvo",
+  color: "black",
+  doors: 5,
+  media: {
+    sound: "Sony",
+  },
+};
+
+console.log(myCarObjOne);
+
+// let make = myCarObjOne.make;
+// let color = myCarObjOne.color;
+
+// let { make, color, height = 172 } = myCarObjOne;
+// console.log(make, color, height);
+
+// let { make: carMake, color: carColor } = myCarObjOne;
+// console.log(carMake, carColor);
+
+// let {
+//   media: { sound },
+// } = myCarObjOne;
+// console.log(sound);
+
+// let prop = "make";
+// let { [prop]: carMake } = myCarObjOne;
+// console.log(carMake);
+
+let { make, ...rest } = myCarObjOne;
+console.log(rest);
