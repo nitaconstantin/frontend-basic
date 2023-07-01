@@ -51,3 +51,20 @@ document.write("text adaugat cu document.write");
 // document.images
 // document.links
 // document.title
+
+let div4 = document.querySelector("div.someClass");
+console.log(div4);
+
+const boxEl = document.getElementById("box");
+let pos = 0;
+const int = setInterval(move, 10);
+
+function move() {
+  if (pos === 400) {
+    clearInterval(int);
+  } else {
+    pos++;
+    boxEl.style.left = pos + "px";
+    boxEl.style.top = pos + "px";
+  }
+}
