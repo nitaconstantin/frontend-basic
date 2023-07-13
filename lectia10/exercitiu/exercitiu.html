@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercitiu - Lectia 10</title>
+    <!-- <script src="./js/exercitiu.js"></script> -->
+    <link rel="stylesheet" href="./css/exercitiu.css" />
+  </head>
+  <body>
+    <ul id="list1"></ul>
+    <div style="margin-top: 20px">
+      <div>Nume:<input type="text" name="person" id="person" /></div>
+      <div>
+        Telefon:<input
+          type="text"
+          name="tel"
+          id="tel"
+          onkeyup="validatePhone(this)"
+        />
+      </div>
+    </div>
+    <div style="color: red; visibility: hidden" id="error">Numar incorect</div>
+    <div>
+      <button onclick="addPerson()" disabled>Adauga</button>
+    </div>
+    <script src="./js/exercitiu.js"></script>
+  </body>
+</html>
