@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lectia 11</title>
+  </head>
+  <body>
+    <h3>Titlul paginii - test</h3>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius minus,
+      commodi vel eveniet sapiente nihil? Laudantium ipsa fugit recusandae,
+      dolorem quaerat ut harum sint quidem corrupti quod at incidunt vel?
+    </div>
+    <script>
+      console.log("Mesaj consola");
+      //   console.log(var1);
+      console.error("Mesaj de eroare");
+      console.warn("Mesaj de atentionare");
+      console.info("Mesaj de informare");
+      console.dir(document);
+      console.log(document.lastModified);
+      console.table([
+        { nume: "Radu", varsta: 28, locatie: "Bucuresti" },
+        { nume: "Andreea", varsta: 23, locatie: "Pitesti" },
+      ]);
+      console.clear();
+
+      console.group("group1");
+      console.log("Mesaj 1");
+      console.log("Mesaj 2");
+      console.log("Mesaj 3");
+      console.log("Mesaj 4");
+      console.groupEnd("group1");
+
+      console.time("time1");
+      //   console.log("mesaj1");
+      // //   setTimeout(() => {
+      // //     console.log("Interiorul functiei");
+      // //   }, 2500);
+      //   console.log("mesaj2");
+      //   for (let i = 0; i < 500; i++) {
+      //     console.log("Iteratia: ", i);
+      //   }
+      //   console.timeEnd("time1");
+      //   const xhr1 = new XMLHttpRequest();
+      //   xhr1.open("GET", "https://api.github.com/users");
+      //   xhr1.onload = function () {
+      //     console.log("done");
+      //   };
+      //   xhr1.send();
+
+      localStorage.setItem("nume", "Radu");
+      const localStorageVar1 = localStorage.getItem("nume");
+      console.log("LocalStorage Item: ", localStorageVar1);
+      //   localStorage.removeItem("nume");
+      //   localStorage.clear();
+
+      sessionStorage.setItem("varsta", "30");
+      const age = sessionStorage.getItem("varsta");
+      console.log("SessionStorage: ", age);
+      //   sessionStorage.removeItem("varsta");
+      //   sessionStorage.clear();
+
+      document.cookie = "nume = Radu Popescu";
+
+      const persons = [
+        {
+          name: "Marius",
+          age: 29,
+          location: "Bucuresti",
+        },
+        {
+          name: "Roxan",
+          age: 25,
+          location: "Ploiesti",
+        },
+        {
+          name: "Adriana",
+          age: 32,
+          location: "Brasov",
+        },
+        {
+          name: "Dan",
+          age: 33,
+          location: "Cluj-Napoca",
+        },
+      ];
+
+      function compare(a, b) {
+        if (a.location < b.location) {
+          return -1;
+        }
+        if (a.location > b.location) {
+          return 1;
+        }
+        return 0;
+      }
+
+      persons.sort(compare);
+      console.log(persons);
+    </script>
+  </body>
+</html>
