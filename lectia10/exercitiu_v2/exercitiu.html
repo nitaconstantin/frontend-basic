@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercitiu - Lectia 10</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <div class="container">
+      <div>Nume:<input type="text" name="name" id="name" /></div>
+      <div>
+        Telefon:
+        <input type="text" name="tel" id="tel" onkeyup="verifyPhone(this)" />
+      </div>
+      <span id="error" style="visibility: hidden"
+        >Introduceti un numar valid</span
+      >
+    </div>
+    <button disabled onclick="addUser()">Adauga</button>
+
+    <script src="./js/exercitiu.js"></script>
+  </body>
+</html>
