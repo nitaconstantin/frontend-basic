@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercitiu V3 - Lectia 3</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <div class="container">
+      <div>Nume:<input type="text" name="name" id="name" /></div>
+      <div>
+        Telefon:<input
+          type="text"
+          name="tel"
+          id="tel"
+          onkeyup="verifyPhone(this)"
+        />
+      </div>
+    </div>
+    <div id="error" style="color: red; visibility: hidden">
+      Formatul telefonului nu este valid
+    </div>
+    <button onclick="addUser()" disabled>Adauga User</button>
+    <script src="./js/exercitiu.js"></script>
+  </body>
+</html>
