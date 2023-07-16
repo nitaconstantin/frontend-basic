@@ -1,0 +1,63 @@
+.login_container {
+  width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid black;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.inputField {
+  margin-bottom: 10px;
+}
+
+.inputLabel {
+  display: inline-block;
+  width: 85px;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+}
+
+.myButton {
+  box-shadow: 0px 10px 14px -7px #9fb4f2;
+  background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+  background-color: #7892c2;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  background-color: #476e9e;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.succesMessage {
+  color: green;
+}
+.errorMessage {
+  color: red;
+}
+
+.msg_text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: none;
+}
