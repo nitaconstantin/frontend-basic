@@ -1,0 +1,13 @@
+.info-msg {
+  display: none;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+#showSuccessMsg {
+  color: green;
+}
+
+#showErrorMsg {
+  color: red;
+}

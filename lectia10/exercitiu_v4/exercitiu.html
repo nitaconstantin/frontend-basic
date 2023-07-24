@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercitiu v4 - Lectia 10</title>
+    <link rel="stylesheet" href="./exercitiu.css" />
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <div class="container">
+      <div>
+        <label>User:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label>Telephone:</label>
+        <input type="text" id="tel" name="tel" onkeyup="verifyPhone(this)" />
+      </div>
+      <div id="showSuccessMsg" class="info-msg">
+        Ati introdus un numar corect!
+      </div>
+      <div id="showErrorMsg" class="info-msg">
+        Numarul introdus nu corespunde formatului necesar!
+      </div>
+      <button disabled onclick="addUser()">Adauga User</button>
+    </div>
+    <script src="./exercitiu.js"></script>
+  </body>
+</html>
