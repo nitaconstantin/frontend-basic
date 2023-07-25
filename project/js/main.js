@@ -1,7 +1,6 @@
 function doStartUpConfig() {
   checkUserLogin();
   createTable();
-  createTableRow();
 }
 function checkUserLogin() {
   const userLoggedIn = sessionStorage.getItem("userLogged");
@@ -90,4 +89,44 @@ function createTableRow() {
   });
 
   return value;
+}
+
+function displayAddForm() {
+  let addForm = document.getElementById("add_form_container");
+  addForm.style.display = "block";
+  document.getElementById("add_container").style.display = "none";
+}
+
+function cancelAddForm() {
+  const userConfirm = confirm(
+    "Are you sure you want to cancel adding a new user?"
+  );
+  console.log("User confirm", userConfirm);
+  // document.getElementById("add_container").style.display = "block";
+  // document.getElementById("add_form_container").style.display = "none";
+  // document.getElementById("name").value = "";
+
+  if (userConfirm) {
+    document.getElementById("add_form").reset();
+    document.getElementById("add_container").style.display = "block";
+    document.getElementById("add_form_container").style.display = "none";
+  }
+}
+// show form my version
+// function showForm() {
+//   let form = document.querySelector("form");
+//   form.style.display = "block";
+//   let btnAdd = document.querySelector("button.addEmpButton");
+//   btnAdd.style.display = "none";
+// }
+
+// cancel add my version
+// function cancelAddEmp() {
+//   // let cancelBtn = document.querySelector("button.cancelButton");
+//   let form = document.querySelector(".add_form_container form");
+//   form.style.display = "none";
+// }
+
+function addNewEmp() {
+  console.log("adding...");
 }

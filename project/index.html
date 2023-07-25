@@ -26,8 +26,53 @@
       </div>
     </div>
 
-    <div class="add_container">
-      <button class="addEmpButton">Add New Employee</button>
+    <div class="add_container" id="add_container">
+      <button class="addEmpButton" onclick="displayAddForm()">
+        Add New Employee
+      </button>
+    </div>
+    <div class="add_form_container" id="add_form_container">
+      <form id="add_form">
+        <div class="el_container">
+          <div class="el_label">Name:</div>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="el_container">
+          <div class="el_label">Age:</div>
+          <input type="text" name="age" id="age" placeholder="18-65" />
+        </div>
+        <div class="el_container">
+          <div class="el_label">Birth Date:</div>
+          <input
+            type="text"
+            name="birthdDate"
+            id="birthdDate"
+            placeholder="YYYY-MM-DD"
+          />
+        </div>
+        <div class="el_container">
+          <div class="el_label">Phone:</div>
+          <input type="text" name="phone" id="phone" placeholder="0721223344" />
+        </div>
+        <div class="el_container">
+          <div class="el_label">Email:</div>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="email@example.com"
+          />
+        </div>
+        <div>
+          <button class="cancelButton" onclick="cancelAddForm()" type="button">
+            Cancel
+          </button>
+          <button class="addEmpButton" onclick="addNewEmp()" type="button">
+            Add
+          </button>
+          <button type="submit" style="display: none">Submit</button>
+        </div>
+      </form>
     </div>
     <div class="table_container">
       <table id="employees_table" cellspacing="0" cellpadding="7"></table>
