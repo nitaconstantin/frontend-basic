@@ -12,64 +12,82 @@ function checkUserLogin() {
   // createTable();
 }
 
-let employeesArr = [
-  {
-    name: "Alex",
-    age: 29,
-    project: null,
-    birthDate: "1994-01-10",
-    date_employee: "2020-10-05",
-    hired: "2021-01-17",
-    phone: "0722112233",
-    email: "alex@alex.com",
-  },
-  {
-    name: "Madalina",
-    age: 25,
-    project: null,
-    birthDate: "1998-09-15",
-    date_employee: "2020-09-20",
-    hired: "2021-01-17",
-    phone: "0722112233",
-    email: "mada@mada.com",
-  },
-  {
-    name: "Cristina",
-    age: 29,
-    project: null,
-    birthDate: "1992-02-11",
-    hired: "2021-01-17",
-    phone: "0722112233",
-    email: "cris@cris.com",
-  },
-];
+// let employeesArr = [
+//   {
+//     name: "Alex",
+//     age: 29,
+//     project: null,
+//     birthDate: "1994-01-10",
+//     date_employee: "2020-10-05",
+//     hired: "2021-01-17",
+//     phone: "0722112233",
+//     email: "alex@alex.com",
+//   },
+//   {
+//     name: "Madalina",
+//     age: 25,
+//     project: null,
+//     birthDate: "1998-09-15",
+//     date_employee: "2020-09-20",
+//     hired: "2021-01-17",
+//     phone: "0722112233",
+//     email: "mada@mada.com",
+//   },
+//   {
+//     name: "Cristina",
+//     age: 29,
+//     project: null,
+//     birthDate: "1992-02-11",
+//     hired: "2021-01-17",
+//     phone: "0722112233",
+//     email: "cris@cris.com",
+//   },
+// ];
+const empForLocalStorage = localStorage.getItem("employeesArr");
+let employeesArr = JSON.parse(empForLocalStorage);
 
 function createTable() {
   let table = document.getElementById("employees_table");
-  let headerStr =
-    "<tr><th>No</th><th>Name</th><th>Age</th><th>Project</th><th>Birthdate</th><th>Hired at</th><th>Phone</th><th>Email</th></tr>";
-  // table.append(headerStr);
-  table.innerHTML = headerStr;
+  if (employeesArr && employeesArr.length === 0) {
+    document.getElementById("no_emp_container").style.display = "block";
+    document.getElementById("table_container").style.display = "none";
+  } else {
+    let headerStr =
+      "<tr><th>No</th><th>Name</th><th>Age</th><th>Project</th><th>Birthdate</th><th>Hired at</th><th>Phone</th><th>Email</th><th>Actions</th></tr>";
+    // table.append(headerStr);
+    table.innerHTML = headerStr;
 
-  // employeesArr.forEach((employee, i) => {
-  //   table.innerHTML += `<tr>
-  //                   <td>${i}</td>
-  //                   <td>${employee.name}</td>
-  //                   <td>${employee.age}</td>
-  //                   <td>${employee.project}</td>
-  //                   <td>${employee.birthDate}</td>
-  //                   <td>${employee.hired}</td>
-  //                   <td>${employee.phone}</td>
-  //                   <td>${employee.email}</td>
-  //                 </tr>`;
-  // });
-  table.innerHTML += createTableRow();
+    // employeesArr.forEach((employee, i) => {
+    //   table.innerHTML += `<tr>
+    //                   <td>${i}</td>
+    //                   <td>${employee.name}</td>
+    //                   <td>${employee.age}</td>
+    //                   <td>${employee.project}</td>
+    //                   <td>${employee.birthDate}</td>
+    //                   <td>${employee.hired}</td>
+    //                   <td>${employee.phone}</td>
+    //                   <td>${employee.email}</td>
+    //                 </tr>`;
+    // });
+    table.innerHTML += createTableRow();
+  }
 }
 
 // function createTableHeader() {
 //   let headerStr =
 //     "<tr><th>No</th><th>Name</th><th>Age</th><th>Project</th><th>Birthdate</th><th>Hired at</th><th>Phone</th><th>Email</th></tr>";
 // }
+
+function deleteEmp(i) {
+  console.log("index:", i);
+  if (
+    confirm("Are you sure you want to delete " + employeesArr[i].name + "?")
+  ) {
+    employeesArr.splice(i, 1);
+    localStorage.setItem("employeesArr", JSON.stringify(employeesArr));
+    createTable();
+  }
+}
 
 function createTableRow() {
   let value = "";
@@ -85,6 +103,7 @@ function createTableRow() {
                 <td>${employee.hired}</td>
                 <td>${employee.phone}</td>
                 <td>${employee.email}</td>
+                <td><span class="delButton" onclick="deleteEmp(${i})">Del</span></td>
               </tr>`;
   });
 
@@ -107,10 +126,14 @@ function cancelAddForm() {
   // document.getElementById("name").value = "";
 
   if (userConfirm) {
-    document.getElementById("add_form").reset();
-    document.getElementById("add_container").style.display = "block";
-    document.getElementById("add_form_container").style.display = "none";
+    clearAndHideForm();
   }
+}
+
+function clearAndHideForm() {
+  document.getElementById("add_form").reset();
+  document.getElementById("add_container").style.display = "block";
+  document.getElementById("add_form_container").style.display = "none";
 }
 // show form my version
 // function showForm() {
@@ -128,7 +151,36 @@ function cancelAddForm() {
 // }
 
 function addNewEmp() {
-  console.log("adding...");
+  console.log("employee added...");
+  // my version
+  // let employee = {
+  //   name: document.getElementById("name").value,
+  //   age: document.getElementById("age").value,
+  //   birthDate: document.getElementById("birthDate").value,
+  //   phone: document.getElementById("phone").value,
+  //   email: document.getElementById("email").value,
+  // };
+  // employeesArr.push(employee);
+  // createTable();
+  // document.getElementById("add_form").reset();
+  const newDate = new Date();
+  const year = newDate.getFullYear();
+  const month = newDate.getMonth() + 1;
+  const monthToAdd = month < 10 ? "0" + month : month;
+  const day = newDate.getDate();
+  const newEmpObj = {
+    name: document.getElementById("name").value,
+    age: document.getElementById("age").value,
+    birthDate: document.getElementById("birthDate").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    hired: year + "-" + monthToAdd + "-" + day,
+    project: null,
+  };
+  employeesArr.push(newEmpObj);
+  localStorage.setItem("employeesArr", JSON.stringify(employeesArr));
+  createTable();
+  clearAndHideForm();
 }
 
 // verify form
