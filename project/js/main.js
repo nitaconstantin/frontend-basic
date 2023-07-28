@@ -89,6 +89,14 @@ function deleteEmp(i) {
   }
 }
 
+function editEmp(i) {
+  displayAddForm();
+  validationKeys = Object.keys(validationObject);
+  validationKeys.forEach((key) => {
+    document.getElementById(key).value = employeesArr[i][key];
+    validationObject[key] = true;
+  });
+}
 function createTableRow() {
   let value = "";
 
@@ -103,7 +111,7 @@ function createTableRow() {
                 <td>${employee.hired}</td>
                 <td>${employee.phone}</td>
                 <td>${employee.email}</td>
-                <td><span class="delButton" onclick="deleteEmp(${i})">Del</span></td>
+                <td><span class="editButton" onclick="editEmp(${i})">Edit</span><span class="delButton" onclick="deleteEmp(${i})">Del</span></td>
               </tr>`;
   });
 
@@ -114,6 +122,11 @@ function displayAddForm() {
   let addForm = document.getElementById("add_form_container");
   addForm.style.display = "block";
   document.getElementById("add_container").style.display = "none";
+  const validationKeys = Object.keys(validationObject);
+  validationKeys.forEach((key) => {
+    validationObject[key] = false;
+  });
+  checkValidationObj();
 }
 
 function cancelAddForm() {
