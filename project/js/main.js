@@ -96,6 +96,7 @@ function editEmp(i) {
     document.getElementById(key).value = employeesArr[i][key];
     validationObject[key] = true;
   });
+  checkValidationObj();
 }
 function createTableRow() {
   let value = "";
