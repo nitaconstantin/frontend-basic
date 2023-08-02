@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="./css/login.css" />
     <script src="./js/login.js"></script>
   </head>
-  <body onload="checkedLoggedInUser()">
+  <body onload="checkLoggedInUser()">
     <div class="login_container">
-      <h3>Please LogIn</h3>
-      <div class="inputField">
-        <span class="inputLabel"> Username: </span>
+      <h3>Please login</h3>
+      <div class="input_field">
+        <span class="input_label"> Username: </span>
         <input type="text" name="username" id="username" />
       </div>
-      <div class="inputField">
-        <span class="inputLabel"> Password: </span>
+      <div class="input_field">
+        <span class="input_label">Password: </span>
         <input type="password" name="password" id="password" />
       </div>
-      <div class="succesMessage msg_text" id="try_success">
-        LogIn Successfull.... redirecting
+      <div class="success_msg msg_txt" id="success_msg">
+        Login successful ... redirecting
       </div>
-      <div class="errorMessage msg_text" id="try_error">
-        Wrong Credentials, please try again...
+      <div class="error_msg msg_txt" id="error_msg">
+        Wrong credentials ... please try again!
       </div>
       <div class="button_container">
-        <button class="myButton" onclick="checkUserPassword()">Login</button>
+        <button class="myButton" onclick="checkUserPass()">LOGIN</button>
       </div>
     </div>
   </body>
