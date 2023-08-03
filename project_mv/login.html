@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login to Project Management Application</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/login.js"></script>
+  </head>
+  <body onload="checkUserIsLogged()">
+    <div class="login_container">
+      <h3>Please login</h3>
+      <div class="input_element">
+        <label class="label_element"> Username: </label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div class="input_element">
+        <label for="" class="label_element"> Password: </label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div class="succes_msg msg_txt" id="success_msg">
+        Login successful ... redirecting
+      </div>
+      <div class="error_msg msg_txt" id="error_msg">
+        Wrong credentials ... please, try again!
+      </div>
+      <div class="button_container">
+        <button onclick="checkUserPass()" class="myButton">LOGIN</button>
+      </div>
+    </div>
+  </body>
+</html>
