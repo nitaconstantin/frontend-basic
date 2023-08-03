@@ -6,6 +6,7 @@ function checkUserPass() {
     document.getElementById("error_msg").style.display = "none";
 
     sessionStorage.setItem("userLogged", "logged");
+    // localStorage.setItem("userLogged", "logged");
     window.location.replace("./index.html");
   } else {
     document.getElementById("error_msg").style.display = "block";
@@ -14,8 +15,9 @@ function checkUserPass() {
 }
 
 function checkUserIsLogged() {
-  const isUserLoged = sessionStorage.getItem("userLogged");
-  if (isUserLoged === "logged") {
+  const isUserLogged = sessionStorage.getItem("userLogged");
+  //   const isUserLogged = localStorage.getItem("userLogged");
+  if (isUserLogged === "logged") {
     window.location.replace("./index.html");
   }
 }
