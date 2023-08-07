@@ -3,10 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Management Application</title>
-    <script src="./js/main.js"></script>
+    <title>Project Management Application - employees</title>
+
+    <link rel="stylesheet" href="./css/common.css" />
   </head>
-  <body onload="isUserLogged()">
-    Index
+  <body onload="configPage()">
+    <header class="header_container">
+      <ul class="header_menu">
+        <li class="menu_item">
+          <img
+            src="./images/logo.png"
+            alt="Logo Company"
+            width="70px"
+            height="70px"
+          />
+        </li>
+        <li class="menu_item company_title">Company</li>
+        <li class="menu_item">
+          <a href="./index.html" class="menu_item_link active"> Employees </a>
+        </li>
+        <li class="menu_item">
+          <a href="./projects.html" class="menu_item_link"> Projects </a>
+        </li>
+      </ul>
+    </header>
+    <section>
+      <div class="add_btn_container" id="add_btn_container">
+        <button onclick="showFormAdd()" class="addNewEmpBtn">
+          Add New Employee
+        </button>
+      </div>
+      <div class="addEmp_container" id="addEmp_container">
+        <form id="formAddEmp">
+          <div class="input_el">
+            <label for="name" class="label_el"> Name: </label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="input_el">
+            <label for="age" class="label_el"> Age: </label>
+            <input type="text" name="age" id="age" />
+          </div>
+          <div class="input_el">
+            <label for="birthDate" class="label_el"> Birth-Date: </label>
+            <input type="text" name="birthDate" id="birthDate" />
+          </div>
+          <div class="input_el">
+            <label for="phone" class="label_el"> Telephone: </label>
+            <input type="text" name="phone" id="phone" />
+          </div>
+          <div class="input_el">
+            <label for="email" class="label_el"> Email: </label>
+            <input type="text" name="email" id="email" />
+          </div>
+          <div class="btns_container">
+            <button type="button" class="resetAddEmp" onclick="resetAddForm()">
+              Reset
+            </button>
+            <button type="button" class="addEmp" disabled>Add Employee</button>
+          </div>
+        </form>
+      </div>
+      <div class="table_container">
+        <table id="table">
+          <thead id="thead"></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+    <script src="./js/main.js"></script>
   </body>
 </html>

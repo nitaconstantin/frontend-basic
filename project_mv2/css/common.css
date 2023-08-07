@@ -1,0 +1,128 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header_menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #000;
+  box-shadow: 5px 7px 5px rgb(66 66 69 / 50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.company_title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 10px;
+}
+
+.menu_item {
+  margin-left: 10px;
+}
+
+.menu_item_link {
+  color: blue;
+  text-decoration: none;
+  display: inline-block;
+  padding: 30px 15px;
+  font-weight: bold;
+}
+
+.menu_item_link:hover {
+  color: green;
+}
+
+.active {
+  background: rgb(220, 220, 220);
+}
+
+section {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.add_btn_container {
+  margin-bottom: 30px;
+}
+
+#table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table th {
+  border: 1px solid;
+  padding: 10px 0;
+}
+
+#table td {
+  padding: 10px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.addNewEmpBtn,
+.addEmp {
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  background-color: #33bdef;
+  border-radius: 6px;
+  border: 1px solid #057fd0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #5b6178;
+}
+.addNewEmpBtn:hover,
+.addEmp:hover {
+  background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  background-color: #019ad2;
+}
+.addNewEmpBtn:active,
+.addEmp:active {
+  position: relative;
+  top: 1px;
+}
+
+.resetAddEmp {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.resetAddEmp:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+.resetAddEmp:active {
+  position: relative;
+  top: 1px;
+}
+
+.btns_container {
+  margin: 20px 0;
+}
+
+#addEmp_container {
+  display: none;
+}
